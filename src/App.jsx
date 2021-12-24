@@ -4,6 +4,8 @@ import Amplify,{ API, graphqlOperation} from "aws-amplify";
 import awsconfig from './aws-exports';
 import { listStories } from "./graphql/queries";
 import React,{useState,useEffect} from 'react'
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 Amplify.configure(awsconfig)
 function App() {
   const [stories,setStories]= useState([])
@@ -21,7 +23,7 @@ function App() {
   }
   return (
     <div className="App">
-      <h1>this is story tails app</h1>
+      <h1>Story tails app</h1>
     {stories &&  <StoryList stories={stories}></StoryList>}
       
     </div>
@@ -30,9 +32,7 @@ function App() {
 
 const StoryList=({stories})=>{
   const [index,setIndex]=useState(0);
-  const zerostory={...stories[0]}
-  console.log(JSON.stringify(zerostory))
-    const [current ,setCurrent]=useState(zerostory)
+    const [current ,setCurrent]=useState({...stories[0]})
   const nav=(i)=>{
     setIndex(i)
     setCurrent(stories[i])
@@ -44,6 +44,7 @@ const StoryList=({stories})=>{
     <div>
       {/* <AutoCompleteSearch suggestions={stories}/> */}
       <NextPrev nav={nav} index={index}maxlenth={stories.length}></NextPrev>
+      {current && <Player filename={current?.filename}/>}
    <Story story={current}></Story>
     </div>
   )
@@ -56,10 +57,18 @@ const NextPrev=({nav,index,maxlenth})=>{
 
   </div>
 }
+const Player=({filename})=>{
+return <AudioPlayer
+autoPlay={false}
+    // src={"https://storiesmp3.s3.ap-south-1.amazonaws.com/"+filename}
+    src={"https://storiesmp3.s3.ap-south-1.amazonaws.com/"+filename}
+    onPlay={e => console.log("onPlay")}
+    // other props here
+  />
+
+}
 const Story=({story})=>{
-console.log(story)
   return (<div>
-    
       <h3>{story?.title}</h3>
       <p>{story?.story_text}</p>
 
