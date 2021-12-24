@@ -1,0 +1,33 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-storytails-dev-224327-authRole",
+      "UnauthRoleArn": "arn:aws:iam::254042255258:role/amplify-storytails-dev-224327-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::254042255258:role/amplify-storytails-dev-224327-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-storytails-dev-224327-deployment",
+      "UnauthRoleName": "amplify-storytails-dev-224327-unauthRole",
+      "StackName": "amplify-storytails-dev-224327",
+      "StackId": "arn:aws:cloudformation:ap-south-1:254042255258:stack/amplify-storytails-dev-224327/a77f5960-6413-11ec-8cb9-02c96d0ac7fe",
+      "AmplifyAppId": "d33acdnc5m99lx"
+    },
+    "categories": {
+      "storage": {
+        "stories": {
+          "tableName": "stories",
+          "region": "ap-south-1",
+          "arn": "arn:aws:dynamodb:ap-south-1:254042255258:table/stories",
+          "partitionKeyName": "id",
+          "partitionKeyType": "S"
+        },
+        "storytails0435771b": {
+          "bucketName": "storiesmp3",
+          "region": "ap-south-1"
+        }
+      },
+      "auth": {
+        "storytailscaa7a29c": {}
+      }
+    }
+  }
+}

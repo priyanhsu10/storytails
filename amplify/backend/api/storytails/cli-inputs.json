@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "storytails",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/priyanshuparate/projects/react/storytails/amplify/backend/api/storytails/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}

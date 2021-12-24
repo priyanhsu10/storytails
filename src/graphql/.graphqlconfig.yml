@@ -1,0 +1,12 @@
+projects:
+  storytails:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - StoryApi
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: .
