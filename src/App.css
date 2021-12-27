@@ -1,7 +1,12 @@
 .App {
   text-align: center;
 }
-
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  color: white;
+  margin-bottom: 30px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
