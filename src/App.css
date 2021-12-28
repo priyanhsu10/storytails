@@ -11,7 +11,25 @@
   height: 40vmin;
   pointer-events: none;
 }
+.fixplayer {
+  position: fixed;
+  top: 85%;
+  width: 80%;
+}
 
+.FixedHeightContainer {
+  height: 600px;
+  padding: 3px;
+}
+.Content {
+  height: 80%;
+  overflow: auto;
+  background: #fff;
+}
+.list {
+  overflow-y: auto;
+  height: 100x;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
